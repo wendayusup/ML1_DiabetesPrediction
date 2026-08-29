@@ -1,0 +1,370 @@
+/* ==============================================================================
+   Diabetes Diagnostic Studio - Glassmorphism Design System
+   Theme: Medical Glass UI (Hijau Daun #10b981 & Biru Muda #0ea5e9)
+   Font: Poppins (Google Fonts)
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* 1. Global Reset & Ambient Mesh Background */
+html, body, [class*="css"], .stApp {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 45%, #e0f2fe 100%) !important;
+    color: #0f172a;
+    min-height: 100vh;
+}
+
+.block-container {
+    padding-top: 0.6rem !important;
+    padding-bottom: 1.2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    max-width: 100% !important;
+}
+
+header[data-testid="stHeader"] {
+    display: none !important;
+}
+
+/* 2. Medical Glassmorphic Sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #092c28 0%, #0c3842 50%, #0f172a 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-right: 1px solid rgba(56, 189, 248, 0.2) !important;
+    box-shadow: 4px 0 24px rgba(6, 78, 59, 0.25) !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #f0fdf4 !important;
+}
+
+.sidebar-brand-box {
+    padding: 12px 8px 16px 8px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    margin-bottom: 14px;
+}
+
+.sidebar-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #ffffff !important;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    background: linear-gradient(90deg, #34d399 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-subtitle {
+    font-size: 10px;
+    color: #93c5fd !important;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.sidebar-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 18px;
+    font-size: 10.5px;
+    line-height: 1.45;
+}
+
+.sidebar-badge {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.35) 0%, rgba(14, 165, 233, 0.35) 100%);
+    color: #6ee7b7 !important;
+    border: 1px solid rgba(52, 211, 153, 0.5);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 9.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+/* Sidebar Radio Navigation Pill */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] > div {
+    background: transparent;
+    gap: 5px;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label:hover {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.22) 0%, rgba(14, 165, 233, 0.22) 100%);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* 3. Top Header Bar (Dual Tone Glass) */
+.app-header {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    border-top: 3px solid #10b981 !important;
+    border-radius: 10px;
+    padding: 9px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.06);
+}
+
+.app-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 0;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+}
+
+.app-subtitle {
+    font-size: 10.5px;
+    color: #0284c7;
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+.app-badge {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(14, 165, 233, 0.15) 100%);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 10.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #10b981;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #0ea5e9;
+}
+
+/* 4. Native Container Glass Border Styling */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(224, 242, 254, 0.9) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.05) !important;
+    padding: 12px 14px !important;
+}
+
+/* Card Section Header */
+.card-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(224, 242, 254, 0.9);
+}
+
+.card-header-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.card-header-status {
+    font-size: 10px;
+    font-weight: 600;
+    color: #0284c7;
+    background: rgba(14, 165, 233, 0.12);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* 5. Uniform Labels & Input Fields */
+label[data-testid="stWidgetLabel"] p {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    margin-bottom: 2px !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+div[data-baseweb="input"] input {
+    height: 32px !important;
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    padding: 1px 8px !important;
+    border-radius: 7px !important;
+    border: 1px solid rgba(186, 230, 253, 0.9) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 1px 3px rgba(16, 185, 129, 0.03) !important;
+    transition: all 0.15s ease !important;
+}
+
+div[data-baseweb="input"] input:focus {
+    border-color: #10b981 !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 0 2.5px rgba(14, 165, 233, 0.2) !important;
+}
+
+div[data-baseweb="select"] > div {
+    min-height: 32px !important;
+    height: 32px !important;
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    border-radius: 7px !important;
+    border: 1px solid rgba(186, 230, 253, 0.9) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 1px 3px rgba(16, 185, 129, 0.03) !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* 6. Diagnosis Result Presentation (Right Panel) */
+.diag-banner {
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.diag-name {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+}
+
+.diag-desc {
+    font-size: 11.5px;
+    color: #475569;
+    margin-bottom: 10px;
+    line-height: 1.45;
+}
+
+/* Metric Summary Cards */
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.metric-pill {
+    background: #ffffff;
+    border: 1px solid rgba(224, 242, 254, 0.9);
+    border-radius: 8px;
+    padding: 7px 10px;
+    box-shadow: 0 1px 4px rgba(14, 165, 233, 0.04);
+    text-align: left;
+}
+
+.metric-pill-label {
+    font-size: 9px;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 1px;
+}
+
+.metric-pill-value {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Differential Diagnostics Rows */
+.diff-header {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.diff-row {
+    background: #ffffff;
+    border: 1px solid rgba(224, 242, 254, 0.9);
+    border-radius: 6px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin-bottom: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.diff-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.15), rgba(14, 165, 233, 0.15));
+    border-right: 2.5px solid #0ea5e9;
+    pointer-events: none;
+}
+
+.diff-name {
+    font-weight: 600;
+    color: #1e293b;
+    z-index: 1;
+}
+
+.diff-val {
+    font-weight: 700;
+    color: #059669;
+    z-index: 1;
+}
+
+/* Clinical Recommendation Callout */
+.rec-callout {
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.rec-title {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
